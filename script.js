@@ -1,5 +1,5 @@
 /* Change `online` to false to manually show the offline state. */
-const SERVER_CONFIG = { ip: 'NexoraIt.aternos.me:31665', online: true, maxPlayers: 13500 };
+const SERVER_CONFIG = { ip: 'NexoraIt.aternos.me:31665', online: false, maxPlayers: 13500 };
 
 const statusLabels = document.querySelectorAll('.server-status');
 const statusDots = document.querySelectorAll('.status-dot');
