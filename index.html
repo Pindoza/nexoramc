@@ -4,120 +4,568 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Nexora — a modded Minecraft world built to explore." />
+
   <title>Nexora — Modded Survival</title>
-  <link rel="icon" href="favicon.png">
-  <link rel="shortcut icon" href="favicon.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./favicon.png?v=2" />
+  <link rel="shortcut icon" type="image/png" href="./favicon.png?v=2" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-  <body>
-    <div class="cursor-glow" aria-hidden="true"></div>
-    <div class="noise" aria-hidden="true"></div>
-    <div class="site-grid" aria-hidden="true"></div>
 
-    <nav class="navbar" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Nexora home">Nexora<span class="brand-dot"></span></a>
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i></i><i></i></button>
-      <div class="nav-links">
-        <a href="#modpack">Modpack</a><a href="#server">Server</a><a href="#info">Info</a>
+<body>
+
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="site-grid" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" aria-label="Primary navigation">
+
+    <a class="brand" href="#top" aria-label="Nexora home">
+      Nexora<span class="brand-dot"></span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+    >
+      <i></i>
+      <i></i>
+    </button>
+
+    <div class="nav-links">
+      <a href="#modpack">Modpack</a>
+      <a href="#server">Server</a>
+      <a href="#info">Info</a>
+    </div>
+
+    <button class="button button-small copy-trigger">
+      Copy IP <span>↗</span>
+    </button>
+
+  </nav>
+
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero section">
+
+      <div class="hero-orb"></div>
+      <div class="hero-shape shape-a"></div>
+      <div class="hero-shape shape-b"></div>
+
+      <div class="hero-particles" aria-hidden="true">
+        <b></b>
+        <b></b>
+        <b></b>
+        <b></b>
+        <b></b>
+        <b></b>
       </div>
-      <button class="button button-small copy-trigger">Copy IP <span>↗</span></button>
-    </nav>
 
-    <main id="top">
-      <section class="hero section">
-        <div class="hero-orb"></div><div class="hero-shape shape-a"></div><div class="hero-shape shape-b"></div>
-        <div class="hero-particles" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b></div>
-        <div class="hero-content">
-          <p class="eyebrow reveal"><span class="status-dot"></span><span class="server-status">Server online</span><span class="eyebrow-divider"></span>Europe / 24h</p>
-          <h1 class="hero-title"><span>Enter the unknown</span><span>of the Minecraft</span><span>community<span class="title-dot">.</span></span></h1>
-          <p class="hero-copy reveal">Creative, technology and monstrous builds in one evolving world.</p>
-          <div class="ip-card reveal">
-            <span>IP Address</span><strong>NexoraIt.aternos.me:31665</strong><button class="copy-trigger" aria-label="Copy server IP">Copy <b>↗</b></button>
-          </div>
-          <div class="hero-actions reveal"><a class="button button-primary magnetic" href="https://github.com/Pindoza/nexoramc/releases/download/mc/nexoramods.zip" download="modpack.zip">Download modpack <span>↓</span></a><a class="text-link magnetic" href="#join">How to join <span>↓</span></a></div>
+      <div class="hero-content">
+
+        <p class="eyebrow reveal">
+          <span class="status-dot"></span>
+          <span class="server-status">Server online</span>
+          <span class="eyebrow-divider"></span>
+          Europe / 24h
+        </p>
+
+        <h1 class="hero-title">
+          <span>Enter the unknown</span>
+          <span>of the Minecraft</span>
+          <span>
+            community<span class="title-dot">.</span>
+          </span>
+        </h1>
+
+        <p class="hero-copy reveal">
+          Creative, technology and monstrous builds in one evolving world.
+        </p>
+
+        <div class="ip-card reveal">
+
+          <span>IP Address</span>
+
+          <strong>
+            NexoraIt.aternos.me:31665
+          </strong>
+
+          <button
+            class="copy-trigger"
+            aria-label="Copy server IP"
+          >
+            Copy <b>↗</b>
+          </button>
+
         </div>
-        <a href="#server" class="scroll-cue"><span></span>Scroll to explore <b>↓</b></a>
-      </section>
 
-      <section id="server" class="stats section-pad">
-        <div class="section-kicker reveal">// Server pulse <span></span></div>
-        <div class="stats-grid">
-          <article class="stat-card reveal"><p>Version</p><strong>1.20.1</strong><em>01</em></article>
-          <article class="stat-card reveal"><p>Loader</p><strong>Forge</strong><em>02</em></article>
-          <article class="stat-card reveal"><p>Mode</p><strong>Creative</strong><em>03</em></article>
-          <article class="stat-cart reveal">
-            <p>Players</p>
-            <strong data-player-count>4287/13500</strong>
-            <em>04</em>
-        <article>
-        <script>
-        const playerCount = document.querySelector("[data-player-count]");
-        let players = 4287;
+        <div class="hero-actions reveal">
 
-        function animatePlayers(target) {
-          const start = players;
-          const duration = 1200;
-          const startTime = performance.now();
+          <a
+            class="button button-primary magnetic"
+            href="https://github.com/Pindoza/nexoramc/releases/download/mc/nexoramods.zip"
+            download="modpack.zip"
+          >
+            Download modpack <span>↓</span>
+          </a>
 
-          function animate(time) {
-            const progress = Math.min((time - startTime) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
+          <a
+            class="text-link magnetic"
+            href="#join"
+          >
+            How to join <span>↓</span>
+          </a>
 
-            const current = Math.round(
-              start + (target - start) * eased
-            );
+        </div>
 
-            playerCount.textContent = `${current}/13500`;
+      </div>
 
-            if (progress < 1) {
-              requestAnimationFrame(animate);
-            } else {
-              players = target;
-            }
-          }
+      <a href="#server" class="scroll-cue">
+        <span></span>
+        Scroll to explore
+        <b>↓</b>
+      </a>
+
+    </section>
+
+
+    <!-- SERVER STATS -->
+    <section id="server" class="stats section-pad">
+
+      <div class="section-kicker reveal">
+        // Server pulse <span></span>
+      </div>
+
+      <div class="stats-grid">
+
+        <article class="stat-card reveal">
+          <p>Version</p>
+          <strong>1.20.1</strong>
+          <em>01</em>
+        </article>
+
+        <article class="stat-card reveal">
+          <p>Loader</p>
+          <strong>Forge</strong>
+          <em>02</em>
+        </article>
+
+        <article class="stat-card reveal">
+          <p>Mode</p>
+          <strong>Creative</strong>
+          <em>03</em>
+        </article>
+
+        <article class="stat-card reveal">
+
+          <p>Players</p>
+
+          <strong data-player-count>
+            4287/13500
+          </strong>
+
+          <em>04</em>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- MODPACK -->
+    <section id="modpack" class="modpack section-pad">
+
+      <header class="section-heading reveal">
+
+        <p>// Download</p>
+
+        <h2>
+          Modpack<span>.</span>
+        </h2>
+
+        <span class="pill">
+          MC 1.20.1&nbsp; · &nbsp;FORGE
+        </span>
+
+      </header>
+
+
+      <article class="download-card reveal">
+
+        <div class="mod-icon">
+          ⬡
+        </div>
+
+        <div class="download-copy">
+
+          <p class="eyebrow">
+            Official release / 01
+          </p>
+
+          <h3>
+            Nexora modpack
+          </h3>
+
+          <p>
+            Full server modpack. Download, install and jump straight into the world.
+          </p>
+
+          <div class="tags">
+            <span>ZIP</span>
+            <span>FORGE</span>
+            <span>1.20.1</span>
+          </div>
+
+        </div>
+
+        <a
+          class="button button-primary magnetic"
+          href="https://github.com/Pindoza/nexoramc/releases/download/mc/nexoramods.zip"
+          download="modpack.zip"
+        >
+          Download <span>↗</span>
+        </a>
+
+        <div class="scanline"></div>
+
+      </article>
+
+    </section>
+
+
+    <!-- INFO -->
+    <section id="info" class="info section-pad">
+
+      <header class="split-heading reveal">
+
+        <p>// Server info</p>
+
+        <h2>
+          Built to<br />
+          explore<span>.</span>
+        </h2>
+
+        <p class="heading-copy">
+          A deliberate world for people who would rather build the impossible
+          than merely survive it.
+        </p>
+
+      </header>
+
+      <div
+        class="feature-line"
+        aria-hidden="true"
+      ></div>
+
+
+      <div class="features">
+
+        <article class="feature-card reveal">
+
+          <span>01 /</span>
+
+          <h3>
+            Technology
+          </h3>
+
+          <p>
+            Interlocking systems and industry with room for your biggest ideas.
+          </p>
+
+          <b>↗</b>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <span>02 /</span>
+
+          <h3>
+            Automation
+          </h3>
+
+          <p>
+            Take the manual work out of ambitious projects. Then scale them.
+          </p>
+
+          <b>↗</b>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <span>03 /</span>
+
+          <h3>
+            Exploration
+          </h3>
+
+          <p>
+            New terrain, strange dimensions, and somewhere new to go.
+          </p>
+
+          <b>↗</b>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <span>04 /</span>
+
+          <h3>
+            Multiplayer
+          </h3>
+
+          <p>
+            A shared canvas for machines, ships, and lasting stories.
+          </p>
+
+          <b>↗</b>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- JOIN -->
+    <section id="join" class="join section-pad">
+
+      <header class="split-heading reveal">
+
+        <p>// Onboarding</p>
+
+        <h2>
+          Join the<br />
+          server<span>.</span>
+        </h2>
+
+        <p class="heading-copy">
+          Three steps. That's it.
+        </p>
+
+      </header>
+
+
+      <div class="steps">
+
+        <article class="step reveal">
+
+          <span>01</span>
+
+          <div>
+
+            <h3>
+              Download modpack
+            </h3>
+
+            <p>
+              Download the ZIP and install the mods.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="step reveal">
+
+          <span>02</span>
+
+          <div>
+
+            <h3>
+              Install Forge
+            </h3>
+
+            <p>
+              Use Minecraft Forge 1.20.1.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="step reveal">
+
+          <span>03</span>
+
+          <div>
+
+            <h3>
+              Join server
+            </h3>
+
+            <p>
+              Connect using:
+              <strong>NexoraIt.aternos.me:31665</strong>
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <button class="ip-panel copy-trigger reveal">
+
+        <span>
+          Server IP
+        </span>
+
+        <strong>
+          NexoraIt.aternos.me:31665
+        </strong>
+
+        <em>
+          Click to copy <b>↗</b>
+        </em>
+
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <a class="brand" href="#top">
+      Nexora<span class="brand-dot"></span>
+    </a>
+
+    <div>
+      © 2026 Nexora
+      <span>Not affiliated with Mojang</span>
+    </div>
+
+    <div class="footer-links">
+
+      <a href="#">
+        GitHub
+      </a>
+
+      <a
+        href="https://github.com/Pindoza/nexoramc/releases/download/mc/nexoramods.zip"
+        download="modpack.zip"
+      >
+        Modpack
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <!-- TOAST -->
+  <div
+    class="toast"
+    role="status"
+  >
+    IP Copied to the clipboard <b>✓</b>
+  </div>
+
+
+  <!-- PLAYER COUNTER -->
+  <script>
+    const playerCount = document.querySelector("[data-player-count]");
+
+    let players = 4287;
+
+    function animatePlayers(target) {
+      const start = players;
+      const duration = 1200;
+      const startTime = performance.now();
+
+      function animate(time) {
+
+        const progress = Math.min(
+          (time - startTime) / duration,
+          1
+        );
+
+        const eased =
+          1 - Math.pow(1 - progress, 3);
+
+        const current = Math.round(
+          start + (target - start) * eased
+        );
+
+        playerCount.textContent =
+          `${current}/13500`;
+
+        if (progress < 1) {
 
           requestAnimationFrame(animate);
+
+        } else {
+
+          players = target;
+
         }
 
-        updatePlayers();
+      }
 
-        setInterval(updatePlayers, 15000);
-        </script>
-        </div>
-      </section>
+      requestAnimationFrame(animate);
+    }
 
-      <section id="modpack" class="modpack section-pad">
-        <header class="section-heading reveal"><p>// Download</p><h2>Modpack<span>.</span></h2><span class="pill">MC 1.20.1&nbsp; · &nbsp;FORGE</span></header>
-        <article class="download-card reveal">
-          <div class="mod-icon">⬡</div><div class="download-copy"><p class="eyebrow">Official release / 01</p><h3>Nexora modpack</h3><p>Full server modpack. Download, install and jump straight into the world.</p><div class="tags"><span>ZIP</span><span>FORGE</span><span>1.20.1</span></div></div>
-          <a class="button button-primary magnetic" href="https://github.com/Pindoza/nexoramc/releases/download/mc/nexoramods.zip" download="modpack.zip">Download <span>↗</span></a>
-          <div class="scanline"></div>
-        </article>>
-        </div>
-      </section>
 
-      <section id="info" class="info section-pad">
-        <header class="split-heading reveal"><p>// Server info</p><h2>Built to<br />explore<span>.</span></h2><p class="heading-copy">A deliberate world for people who would rather build the impossible than merely survive it.</p></header>
-        <div class="feature-line" aria-hidden="true"></div>
-        <div class="features">
-          <article class="feature-card reveal"><span>01 /</span><h3>Technology</h3><p>Interlocking systems and industry with room for your biggest ideas.</p><b>↗</b></article>
-          <article class="feature-card reveal"><span>02 /</span><h3>Automation</h3><p>Take the manual work out of ambitious projects. Then scale them.</p><b>↗</b></article>
-          <article class="feature-card reveal"><span>03 /</span><h3>Exploration</h3><p>New terrain, strange dimensions, and somewhere new to go.</p><b>↗</b></article>
-          <article class="feature-card reveal"><span>04 /</span><h3>Multiplayer</h3><p>A shared canvas for machines, ships, and lasting stories.</p><b>↗</b></article>
-        </div>
-      </section>
+    function updatePlayers() {
 
-      <section id="join" class="join section-pad">
-        <header class="split-heading reveal"><p>// Onboarding</p><h2>Join the<br />server<span>.</span></h2><p class="heading-copy">Three steps. That's it.</p></header>
-        <div class="steps"><article class="step reveal"><span>01</span><div><h3>Download modpack</h3><p>Download the ZIP and install the mods.</p></div></article><article class="step reveal"><span>02</span><div><h3>Install Forge</h3><p>Use Minecraft Forge 1.20.1.</p></div></article><article class="step reveal"><span>03</span><div><h3>Join server</h3><p>Connect using: <strong>NexoraIt.aternos.me:31665</strong></p></div></article></div>
-        <button class="ip-panel copy-trigger reveal"><span>Server IP</span><strong>NexoraIt.aternos.me:31665</strong><em>Click to copy <b>↗</b></em></button>
-      </section>
-    </main>
-    <footer><a class="brand" href="#top">Nexora<span class="brand-dot"></span></a><div>© 2026 Nexora <span>Not affiliated with Mojang</span></div><div class="footer-links"><a href="#">GitHub</a><a href="https://github.com/Pindoza/nexoramc/releases/download/mc/nexoramods.zip" download="modpack.zip">Modpack</a></div></footer>
-    <div class="toast" role="status">IP Copied to the clipboard <b>✓</b></div>
-    <script src="script.js"></script>
-  </body>
+      // Losowa zmiana od -50 do +50 graczy
+      const change =
+        Math.floor(Math.random() * 101) - 50;
+
+      const target =
+        Math.max(
+          0,
+          Math.min(
+            13500,
+            players + change
+          )
+        );
+
+      animatePlayers(target);
+    }
+
+
+    // Pierwsze uruchomienie
+    updatePlayers();
+
+
+    // Aktualizacja co 15 sekund
+    setInterval(
+      updatePlayers,
+      15000
+    );
+  </script>
+
+
+  <!-- MAIN JS -->
+  <script src="script.js"></script>
+
+</body>
 </html>
