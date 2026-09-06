@@ -5,7 +5,7 @@ const statusLabels = document.querySelectorAll('.server-status');
 const statusDots = document.querySelectorAll('.status-dot');
 const playerCount = document.querySelector('[data-player-count]');
 const setServerStatus = (online) => {
-  statusLabels.forEach((label) => label.textContent = online ? 'SERVER ONLINE' : '🟥 SERVER OFFLINE');
+  statusLabels.forEach((label) => label.textContent = online ? 'Server online' : '🟥 Server offline');
   statusDots.forEach((dot) => dot.classList.toggle('offline', !online));
 };
 setServerStatus(SERVER_CONFIG.online);
