@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nexora — a modded Minecraft world built to explore." />
+    <title>Nexora — Modded Survival</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="site-grid" aria-hidden="true"></div>
+
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Nexora home">NEXORA<span class="brand-dot"></span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i></i><i></i></button>
+      <div class="nav-links">
+        <a href="#modpack">MODPACK</a><a href="#server">SERVER</a><a href="#info">INFO</a>
+      </div>
+      <button class="button button-small copy-trigger">COPY IP <span>↗</span></button>
+    </nav>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-orb"></div><div class="hero-shape shape-a"></div><div class="hero-shape shape-b"></div>
+        <div class="hero-particles" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b></div>
+        <div class="hero-content">
+          <p class="eyebrow reveal"><span class="status-dot"></span><span class="server-status">SERVER ONLINE</span><span class="eyebrow-divider"></span>EUROPE / 24H</p>
+          <h1 class="hero-title"><span>Enter the unknown</span><span>of the Minecraft</span><span>community<span class="title-dot">.</span></span></h1>
+          <p class="hero-copy reveal">Creative, technology and monstrous builds in one evolving world.</p>
+          <div class="ip-card reveal">
+            <span>IP ADDRESS</span><strong>play.nexora.pl</strong><button class="copy-trigger" aria-label="Copy server IP">COPY <b>↗</b></button>
+          </div>
+          <div class="hero-actions reveal"><a class="button button-primary magnetic" href="nexoramods.zip" download="modpack.zip">DOWNLOAD MODPACK <span>↓</span></a><a class="text-link magnetic" href="#join">HOW TO JOIN <span>↓</span></a></div>
+        </div>
+        <a href="#server" class="scroll-cue"><span></span>SCROLL TO EXPLORE <b>↓</b></a>
+      </section>
+
+      <section id="server" class="stats section-pad">
+        <div class="section-kicker reveal">// SERVER PULSE <span></span></div>
+        <div class="stats-grid">
+          <article class="stat-card reveal"><p>VERSION</p><strong>1.20.1</strong><em>01</em></article>
+          <article class="stat-card reveal"><p>LOADER</p><strong>FORGE</strong><em>02</em></article>
+          <article class="stat-card reveal"><p>MODE</p><strong>CREATIVE</strong><em>03</em></article>
+          <article class="stat-card reveal"><p>PLAYERS</p><strong data-player-count>0/20</strong><em>04</em></article>
+        </div>
+      </section>
+
+      <section id="modpack" class="modpack section-pad">
+        <header class="section-heading reveal"><p>// DOWNLOAD</p><h2>MODPACK<span>.</span></h2><span class="pill">MC 1.20.1&nbsp; · &nbsp;FORGE</span></header>
+        <article class="download-card reveal">
+          <div class="mod-icon">⬡</div><div class="download-copy"><p class="eyebrow">OFFICIAL RELEASE / 01</p><h3>Nexora mod pack</h3><p>Full server modpack. Download, install and jump straight into the world.</p><div class="tags"><span>ZIP</span><span>FORGE</span><span>1.20.1</span></div></div>
+          <a class="button button-primary magnetic" href="nexoramods.zip" download="nexoramods.zip">Download mod pack <span>↗</span></a>
+          <div class="scanline"></div>
+        </article>
+      </section>
+
+      <section id="info" class="info section-pad">
+        <header class="split-heading reveal"><p>// SERVER INFO</p><h2>BUILT TO<br />EXPLORE<span>.</span></h2><p class="heading-copy">A deliberate world for people who would rather build the impossible than merely survive it.</p></header>
+        <div class="feature-line" aria-hidden="true"></div>
+        <div class="features">
+          <article class="feature-card reveal"><span>01 /</span><h3>TECHNOLOGY</h3><p>Interlocking systems and industry with room for your biggest ideas.</p><b>↗</b></article>
+          <article class="feature-card reveal"><span>02 /</span><h3>AUTOMATION</h3><p>Take the manual work out of ambitious projects. Then scale them.</p><b>↗</b></article>
+          <article class="feature-card reveal"><span>03 /</span><h3>EXPLORATION</h3><p>New terrain, strange dimensions, and somewhere new to go.</p><b>↗</b></article>
+          <article class="feature-card reveal"><span>04 /</span><h3>MULTIPLAYER</h3><p>A shared canvas for machines, ships, and lasting stories.</p><b>↗</b></article>
+        </div>
+      </section>
+
+      <section id="join" class="join section-pad">
+        <header class="split-heading reveal"><p>// ONBOARDING</p><h2>JOIN THE<br />SERVER<span>.</span></h2><p class="heading-copy">Three steps. That's it.</p></header>
+        <div class="steps"><article class="step reveal"><span>01</span><div><h3>DOWNLOAD MODPACK</h3><p>Download the ZIP and install the mods.</p></div></article><article class="step reveal"><span>02</span><div><h3>INSTALL FORGE</h3><p>Use Minecraft Forge 1.20.1.</p></div></article><article class="step reveal"><span>03</span><div><h3>JOIN SERVER</h3><p>Connect using: <strong>play.nexora.pl</strong></p></div></article></div>
+        <button class="ip-panel copy-trigger reveal"><span>SERVER IP</span><strong>play.nexora.pl</strong><em>CLICK TO COPY <b>↗</b></em></button>
+      </section>
+    </main>
+    <footer><a class="brand" href="#top">NEXORA<span class="brand-dot"></span></a><div>© 2026 NEXORA <span>NOT AFFILIATED WITH MOJANG</span></div><div class="footer-links"><a href="#">DISCORD</a><a href="#">GITHUB</a><a href="nexoramods.zip" download="nexoramods.zip">MODPACK</a></div></footer>
+    <div class="toast" role="status">IP Copied to the clipboard <b>✓</b></div>
+    <script src="script.js"></script>
+  </body>
+</html>
