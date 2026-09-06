@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Nexora — a modded Minecraft world built to explore." />
-
   <title>Nexora — Modded Survival</title>
 
   <!-- Favicon -->
@@ -19,7 +18,7 @@
     rel="stylesheet"
   />
 
-  <!-- CSS -->
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -144,7 +143,7 @@
     </section>
 
 
-    <!-- SERVER STATS -->
+    <!-- SERVER -->
     <section id="server" class="stats section-pad">
 
       <div class="section-kicker reveal">
@@ -172,15 +171,9 @@
         </article>
 
         <article class="stat-card reveal">
-
           <p>Players</p>
-
-          <strong data-player-count>
-            4287/13500
-          </strong>
-
+          <strong data-player-count>0/13500</strong>
           <em>04</em>
-
         </article>
 
       </div>
@@ -204,7 +197,6 @@
         </span>
 
       </header>
-
 
       <article class="download-card reveal">
 
@@ -273,7 +265,6 @@
         aria-hidden="true"
       ></div>
 
-
       <div class="features">
 
         <article class="feature-card reveal">
@@ -292,7 +283,6 @@
 
         </article>
 
-
         <article class="feature-card reveal">
 
           <span>02 /</span>
@@ -309,7 +299,6 @@
 
         </article>
 
-
         <article class="feature-card reveal">
 
           <span>03 /</span>
@@ -325,7 +314,6 @@
           <b>↗</b>
 
         </article>
-
 
         <article class="feature-card reveal">
 
@@ -366,7 +354,6 @@
 
       </header>
 
-
       <div class="steps">
 
         <article class="step reveal">
@@ -387,7 +374,6 @@
 
         </article>
 
-
         <article class="step reveal">
 
           <span>02</span>
@@ -405,7 +391,6 @@
           </div>
 
         </article>
-
 
         <article class="step reveal">
 
@@ -427,7 +412,6 @@
         </article>
 
       </div>
-
 
       <button class="ip-panel copy-trigger reveal">
 
@@ -487,81 +471,6 @@
   >
     IP Copied to the clipboard <b>✓</b>
   </div>
-
-
-  <!-- PLAYER COUNTER -->
-  <script>
-    const playerCount = document.querySelector("[data-player-count]");
-
-    let players = 4287;
-
-    function animatePlayers(target) {
-      const start = players;
-      const duration = 1200;
-      const startTime = performance.now();
-
-      function animate(time) {
-
-        const progress = Math.min(
-          (time - startTime) / duration,
-          1
-        );
-
-        const eased =
-          1 - Math.pow(1 - progress, 3);
-
-        const current = Math.round(
-          start + (target - start) * eased
-        );
-
-        playerCount.textContent =
-          `${current}/13500`;
-
-        if (progress < 1) {
-
-          requestAnimationFrame(animate);
-
-        } else {
-
-          players = target;
-
-        }
-
-      }
-
-      requestAnimationFrame(animate);
-    }
-
-
-    function updatePlayers() {
-
-      // Losowa zmiana od -50 do +50 graczy
-      const change =
-        Math.floor(Math.random() * 101) - 50;
-
-      const target =
-        Math.max(
-          0,
-          Math.min(
-            13500,
-            players + change
-          )
-        );
-
-      animatePlayers(target);
-    }
-
-
-    // Pierwsze uruchomienie
-    updatePlayers();
-
-
-    // Aktualizacja co 15 sekund
-    setInterval(
-      updatePlayers,
-      15000
-    );
-  </script>
 
 
   <!-- MAIN JS -->
